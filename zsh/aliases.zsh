@@ -51,7 +51,7 @@ rg() {
 alias yesno='[[ $? -eq 0 ]] && echo yes || echo no'
 
 # As in "Message Less", use it on a free terminal to see the logs as they come.
-alias mess='clear ; tail -f /var/log/messages'
+alias mess='clear ; tail -F /var/log/messages'
 
 # make a backup of a file
 bk() {
@@ -76,7 +76,7 @@ unsetenv() {
 	fi
 }
 
-ssh() {
-	command ssh "$@"
-	echo -ne "\ekdutch\e\\"
-}
+#ssh() {
+#	command ssh "$@"
+#	echo -ne "\ekdutch\e\\"
+#}
