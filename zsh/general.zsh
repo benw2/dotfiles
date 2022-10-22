@@ -1,5 +1,5 @@
 # if we don't set $SHELL then aterm, rxvt,.. will use /bin/sh or /bin/bash :-/
-SHELL='/bin/zsh'
+SHELL=$(which zsh)
 
 #
 watch=(notme)                   # watch for everybody but me
