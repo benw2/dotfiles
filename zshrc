@@ -17,13 +17,20 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to disable auto-setting terminal title.
 DISABLE_AUTO_TITLE="true"
-
-plugins=(git dirhistory colored-man-pages history-substring-search ssh-agent)
-
 # For OSX, add extra flags to get the ssh keys from the keychain
 if [[ "${OSTYPE}" = darwin* ]]; then
   zstyle :omz:plugins:ssh-agent ssh-add-args --apple-use-keychain
 fi
+
+# Enable agent forwarding support
+zstyle :omz:plugins:ssh-agent agent-forwarding yes
+
+# Set maximum lifetime for identities
+zstyle :omz:plugins:ssh-agent lifetime 4h
+
+# zstyle :omz:plugins:ssh-agent quiet yes
+
+plugins=(git dirhistory colored-man-pages history-substring-search ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 
