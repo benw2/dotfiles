@@ -36,3 +36,8 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Include any customization required for this specific host
+if [ -r ~/.dotfiles/private/$HOSTNAME.late.zshrc ] ; then
+  source ~/.dotfiles/private/$HOSTNAME.late.zshrc
+fi
