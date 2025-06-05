@@ -4,6 +4,8 @@
 if [ ! -f ~/antigen.zsh ] || [ ! -s ~/antigen.zsh ]; then
     echo "Downloading antigen..."
     curl -L git.io/antigen > ~/antigen.zsh
+
+    git clone --depth=1 https://github.com/zsh-users/antigen.git ~/antigen
 fi
 
 # # Ensure powerlevel10k is installed
