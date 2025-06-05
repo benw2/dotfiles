@@ -6,9 +6,10 @@
 antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle git  # git shell completions
+antigen bundle dotenv             # automatically load .env file when you go into a directory
+antigen bundle git                # git shell completions
 antigen bundle command-not-found
-antigen bundle dirhistory  # keyboard shortcuts to navigate directories
+antigen bundle dirhistory         # keyboard shortcuts to navigate directories
 antigen bundle colored-man-pages  # man pages with color
 
 # Additional bundles
