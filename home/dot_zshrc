@@ -30,9 +30,12 @@ zstyle :omz:plugins:ssh-agent lifetime 4h
 
 # zstyle :omz:plugins:ssh-agent quiet yes
 
-plugins=(git dirhistory colored-man-pages history-substring-search ssh-agent)
+#plugins=(git dirhistory colored-man-pages history-substring-search ssh-agent)
+#source $ZSH/oh-my-zsh.sh
 
-source $ZSH/oh-my-zsh.sh
+# Move zsh plugin setup to antigen
+source ~/.local/antigen/antigen.zsh
+antigen init ~/.antigenrc
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
