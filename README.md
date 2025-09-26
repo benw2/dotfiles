@@ -4,7 +4,7 @@ Basic dotfiles setup with [chezmoi](https://www.chezmoi.io/)
 
 ## Setup Notes
 
-If chezmois is already installed
+If chezmoi is already installed
 
 ```sh
 chezmoi init --apply benw2
