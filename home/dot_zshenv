@@ -40,6 +40,6 @@ if [ -d "$HOME/.cargo/bin" ] ; then
   export PATH="$PATH:$HOME/.cargo/bin"
 fi
 
-if [ -r ~/.dotfiles/private/$HOSTNAME.zshenv ] ; then
-  source ~/.dotfiles/private/$HOSTNAME.zshenv
+if [ -r ~/.config/private/$HOSTNAME.zshenv ] ; then
+  source ~/.config/private/$HOSTNAME.zshenv
 fi
