@@ -31,7 +31,7 @@ zstyle :omz:plugins:ssh-agent lifetime 4h
 # zstyle :omz:plugins:ssh-agent quiet yes
 
 #plugins=(git dirhistory colored-man-pages history-substring-search ssh-agent)
-#source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 
 # Move zsh plugin setup to antigen
 source ~/.local/antigen/antigen.zsh
@@ -41,8 +41,8 @@ antigen init ~/.antigenrc
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Include any customization required for this specific host
-if [ -r ~/.dotfiles/private/$HOSTNAME.late.zshrc ] ; then
-  source ~/.dotfiles/private/$HOSTNAME.late.zshrc
+if [ -r ~/.config/private/$HOSTNAME.late.zshrc ] ; then
+  source ~/.config/private/$HOSTNAME.late.zshrc
 fi
 
 # End
