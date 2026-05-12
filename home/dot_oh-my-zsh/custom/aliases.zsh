@@ -76,6 +76,24 @@ unsetenv() {
 	fi
 }
 
+# Search history
+hgrep() {
+  local count
+  if [[ $# -eq 2 ]]; then
+    count="$2"
+  else
+    count=10
+  fi
+
+  if command -v rg >/dev/null 2>&1; then
+    fc -l 1 | rg -- "$pattern" | tail -n "$count"
+  else
+    fc -l 1 | grep -- "$pattern" | tail -n "$count"
+  fi
+
+}
+
+
 #ssh() {
 #	command ssh "$@"
 #	echo -ne "\ekdutch\e\\"
